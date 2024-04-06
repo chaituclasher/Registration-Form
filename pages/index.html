@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light gray background */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .main {
+            background-color: #fff; /* White background */
+            padding: 40px; /* Add padding */
+            border-radius: 20px; /* Add border radius */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow */
+        }
+        .box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px; /* Increase margin */
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            border: 2px solid #ccc; /* Add border */
+            transition: border-color 0.3s ease; /* Smooth border transition */
+        }
+        .box:focus {
+            border-color: #007bff; /* Change border color on focus */
+        }
+        #submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #submit:hover {
+            background-color: #0056b3;
+        }
+        .bubble1, .bubble2, .bubble3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #007bff; /* Blue bubbles */
+            opacity: 0.3;
+            z-index: -1; /* Behind other content */
+        }
+        .bubble1 {
+            top: -20px;
+            left: -20px;
+        }
+        .bubble2 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bubble3 {
+            bottom: -20px;
+            right: -20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background bubbles -->
+    <div class="bubble1"></div>
+    <div class="bubble2"></div>
+    <div class="bubble3"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 main">
+                <form action="/register" method="POST">
+                    <h2 class="text-center">Registration Form</h2>
+                    <input type="text" class="box" id="name" name="name" placeholder="Name" required/>
+                    <input type="email" class="box" id="email" name="email" placeholder="Email Id" required/>
+                    <input type="password" class="box" id="password" name="password" placeholder="Password" required/>
+                    <input type="submit" value="Submit" id="submit" />
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+</html>
